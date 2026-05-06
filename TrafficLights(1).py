@@ -15,7 +15,7 @@ complete_diamond = Image('00900:'
                         '09990:'
                         '99999:'
                         '09990:'
-                        '00900:')
+                        '00900:')                                 
 def feu_vert():
     for _ in range(9):
          sleep(1000)
@@ -31,13 +31,11 @@ def feu_rouge():
           sleep(1000)
           display.show(i)
           sleep(1000)
-
-def init() :
-        feu_vert()
-        feu_rouge()
         
+         
 while True :
     message = radio.receive()
     if message == "init":
-        init()
+        feu_vert()
+        feu_rouge()
     sleep(10)
